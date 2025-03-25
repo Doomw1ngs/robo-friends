@@ -1,5 +1,5 @@
 {
-  "short_name": "React App",
+  "short_name": "Vite App",
   "name": "Robo Friends",
   "start_url": "/robo-friends/",
   "scope": "/robo-friends/",

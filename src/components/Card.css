@@ -2,6 +2,11 @@
   min-width: 300px;
   min-height: 300px;
   transition: transform 0.2s ease;
+  overflow: hidden;
+}
+
+.card img {
+  display: block;
 }
 
 .card:hover {

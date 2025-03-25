@@ -33,14 +33,20 @@ class App extends React.Component {
       robot.name.toLowerCase().includes(searchField.toLowerCase())
     );
 
-    return isPending ? (
-      <h1>Loading...</h1>
-    ) : (
+    return (
       <div className='tc'>
         <h1 className='f1 pa3'>Cat-RoboFriends</h1>
         <SearchBox searchChange={onSearchChange} />
         <Scroll>
-          <CardList robots={filteredRobots} />
+          <div className='cards-container'>
+            {isPending ? (
+              <h2>Loading...</h2>
+            ) : filteredRobots.length > 0 ? (
+              <CardList robots={filteredRobots} />
+            ) : (
+              <h2>No cats found 😿</h2>
+            )}
+          </div>
         </Scroll>
       </div>
     );

@@ -11,3 +11,7 @@ h1 {
   font-weight: 200;
   color: #333333;
 }
+
+.card-container {
+  min-height: 500px;
+}

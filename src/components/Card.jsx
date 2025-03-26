@@ -1,15 +1,15 @@
 import React from 'react';
 import './Card.css';
 
-const Card = ({ name, email, id }) => {
+const Card = ({ name, email, id, loading }) => {
   return (
     <div className='tc bg-light-green dib br3 pa3 ma2 bw2 shadow-5 card'>
       <img
         src={`https://robohash.org/${id}?set=set4&size=200x200`}
         width={200}
         height={200}
-        loading='lazy'
         alt='Cat Profile'
+        loading={loading}
       />
       <div>
         <h2>{name}</h2>

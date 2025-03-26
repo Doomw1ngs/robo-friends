@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
+import Card from '../components/Card';
 import './App.css';
 import { setSearchField, requestRobots } from '../actions';
 
@@ -40,7 +41,7 @@ class App extends React.Component {
         <Scroll>
           <div className='cards-container'>
             {isPending ? (
-              <h2>Loading...</h2>
+              <Card id={1} name='Loading Cat' email='loading@example.com' />
             ) : filteredRobots.length > 0 ? (
               <CardList robots={filteredRobots} />
             ) : (
